@@ -50,3 +50,5 @@ Para esta Prueba de Concepto, se ha desarrollado una Notebook interactiva.
 **Técnicas utilizadas:**
 * **Role Prompting:** Se define el perfil de Analista de CX.
 * **Few-Shot Prompting:** Se integraron ejemplos de jerga logística para asegurar que la IA interprete correctamente las fallas en el interior.
+
+"Se incluye material visual generado mediante IA (Nightcafe) para reforzar el protocolo de remitos en cabina, atacando la problemática de pérdida de documentación."

@@ -41,3 +41,12 @@ Few-shot: Para entrenar al modelo en el reconocimiento de la jerga logística lo
 Modelos de Lenguaje: OpenAI API (GPT) a través de una Jupyter Notebook en Python.
 
 Modelos de Imagen: Stable Diffusion / Nightcafe para generar material de capacitación visual.
+
+### Implementación Técnica (POC)
+Para esta Prueba de Concepto, se ha desarrollado una Notebook interactiva. 
+
+**Nota sobre la API:** Debido a limitaciones de cuota en la API de OpenAI, la Notebook actual utiliza una **función de simulación (Mocking)**. Esta función replica exactamente la lógica de clasificación que se obtuvo durante las pruebas reales con el modelo `gpt-3.5-turbo`, permitiendo al tutor evaluar la estructura de los prompts y la salida de datos sin necesidad de configurar una API Key de pago.
+
+**Técnicas utilizadas:**
+* **Role Prompting:** Se define el perfil de Analista de CX.
+* **Few-Shot Prompting:** Se integraron ejemplos de jerga logística para asegurar que la IA interprete correctamente las fallas en el interior.

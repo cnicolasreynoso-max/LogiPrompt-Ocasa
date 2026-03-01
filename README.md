@@ -1,37 +1,41 @@
-LogiPrompt Ocasa: Inteligencia Artificial para la Gestión de Última Milla
+LogiPrompt Ocasa: Eficiencia Documental y Operativa mediante Fast Prompting
 Introducción
 Nombre del Proyecto: LogiPrompt Ocasa
 
-Autor: Christian Reynoso
+Alumno: Christian Reynoso
 
 Comisión: 95825
 
+Este proyecto desarrolla una Prueba de Concepto (POC) para solucionar fallas críticas en la logística de "última milla". Se enfoca en digitalizar reportes de incidentes de choferes (especialmente en el interior) y asegurar el cumplimiento del protocolo de custodia de remitos en cabina.
+
 Presentación del Problema
-En las operaciones logísticas de distribución (específicamente para clientes como Molinos), se detectan tres fallas críticas:
+En la operación diaria de transporte para clientes como Molinos, existen tres dolores principales:
 
-Sub-notificación de incidentes: Los choferes en el interior no reportan motivos específicos de falla (turnos no asignados, avisos fallidos) por la complejidad de los sistemas actuales.
+Falta de datos: Los choferes no informan por qué falló una visita (turnos no dados, avisos no conseguidos), perdiendo trazabilidad.
 
-Pérdida de documentación: Incumplimiento del protocolo de custodia de remitos (deben estar en cabina, pero suelen perderse en los pallets).
+Pérdida de Remitos: Los documentos se quedan en los pallets o pedidos, cuando el protocolo exige que viajen en la cabina con el chofer.
 
-Barrera técnica: Los choferes operan en movilidad y con poco tiempo, dificultando la carga de datos manual.
+Barrera Operativa: El personal de conducción no tiene tiempo para usar apps complejas; necesitan soluciones vía lenguaje natural (texto/audio).
 
-Relevancia: Resolver esto permite al equipo de CX transformar "visitas no realizadas" en datos accionables para mejorar el ruteo y la relación con el cliente.
+Objetivos
+Automatizar la clasificación de incidentes logísticos usando IA.
 
-Objetivos del Proyecto
-General: Desarrollar una Prueba de Concepto (POC) que automatice la clasificación de reportes logísticos mediante IA.
+Validar el cumplimiento de protocolos internos mediante análisis de texto.
 
-Específicos: * Implementar técnicas de Fast Prompting para extraer datos de mensajes informales.
-
-Crear una herramienta de concientización visual mediante modelos de Texto-a-Imagen.
-
-Asegurar la rentabilidad de la solución minimizando las consultas a la API.
+Generar material visual de capacitación de forma rápida con IA generativa.
 
 Metodología
-El proyecto se desarrolla bajo una metodología de Procesamiento de Lenguaje Natural (NLP) asistido. Se capturan las transcripciones de mensajes de voz de los choferes y se pasan por un motor de IA (GPT-4o/3.5) configurado con un System Prompt robusto que actúa como un Analista de Operaciones Senior. Se utiliza un enfoque iterativo para refinar los resultados basándose en casos reales de la operación de Ocasa.
+Se implementa un flujo de trabajo donde el mensaje informal del chofer es procesado por un modelo de lenguaje. Se utiliza una metodología de refinamiento iterativo, probando los prompts en entornos reales para asegurar que la IA comprenda la jerga logística argentina.
 
 Herramientas y Tecnologías
-Técnicas de Prompting: * Zero-shot: Para clasificar urgencias de forma rápida.
+Técnicas de Prompting: Zero-shot (clasificación rápida), One-shot y Few-shot (para contexto específico de Ocasa).
 
+Implementación: Python en Jupyter Notebook (Google Colab).
+
+Modelos de IA: OpenAI API (GPT-3.5/4) y Nightcafe (para generación de imágenes de señalética y capacitación).
+
+Justificación de Viabilidad
+El proyecto es viable porque utiliza recursos de bajo costo (API Keys) y tecnologías que no requieren infraestructura nueva. La rentabilidad se justifica al reducir las devoluciones de mercadería por falta de documentación, cuyo costo es infinitamente mayor al de una consulta a la IA.
 Few-shot: Para entrenar al modelo en el reconocimiento de la jerga logística local y códigos de incidente específicos de Ocasa.
 
 Modelos de Lenguaje: OpenAI API (GPT) a través de una Jupyter Notebook en Python.

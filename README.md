@@ -50,5 +50,5 @@ Se generó una pieza visual para reforzar el cumplimiento del protocolo de custo
 **Prompt utilizado:** > "Un chofer de logística de la empresa Ocasa, vistiendo su uniforme azul, colocando cuidadosamente un remito dentro de una funda transparente en la cabina de su camión. Se ve el tablero del camión y un cartel legible que dice 'PROTOCOLO DE REMITO EN CABINA'. La luz del sol entra por el parabrisas, estilo fotorrealista, alta definición, transmitiendo orden y eficiencia operativa."
 
 **Resultado:**
-![Protocolo de Remitos](./Imagen chofer1.jpg)
+![Protocolo de Remitos](./Imagen_chofer1.jpg)
 *La imagen sirve como apoyo visual para las capacitaciones de los choferes de la operación Molinos.*

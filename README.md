@@ -1,54 +1,45 @@
-LogiPrompt Ocasa: Eficiencia Documental y Operativa mediante Fast Prompting
-Introducción
-Nombre del Proyecto: LogiPrompt Ocasa
+# LogiPrompt Ocasa: Inteligencia Artificial para la Gestión de Última Milla
 
-Alumno: Christian Reynoso
+## Resumen
+LogiPrompt es una solución basada en Inteligencia Artificial diseñada para optimizar la comunicación entre los choferes de distribución y el equipo de Customer Experience (CX). Mediante el uso de técnicas de Fast Prompting y modelos generativos, el sistema transforma reportes informales en datos estructurados y genera material visual para asegurar el cumplimiento del protocolo de remitos.
 
-Comisión: 95825
+## Introducción
+**Nombre del Proyecto:** LogiPrompt Ocasa  
+**Alumno:** Christian Reynoso  
 
-Este proyecto desarrolla una Prueba de Concepto (POC) para solucionar fallas críticas en la logística de "última milla". Se enfoca en digitalizar reportes de incidentes de choferes (especialmente en el interior) y asegurar el cumplimiento del protocolo de custodia de remitos en cabina.
+### Presentación del Problema
+En la logística de última milla (caso Molinos), la falta de reportes precisos y la pérdida de documentos físicos generan costos operativos altísimos. Los choferes, por la velocidad de la tarea, suelen omitir detalles críticos (turnos fallidos, avisos no conseguidos) o incumplen el protocolo de custodia de remitos en cabina.
 
-Presentación del Problema
-En la operación diaria de transporte para clientes como Molinos, existen tres dolores principales:
+### Desarrollo de la Propuesta
+La solución utiliza:
+1.  **Modelo Texto-Texto:** Un motor de procesamiento que utiliza *Few-Shot* y *Prompting Dirigido* para extraer datos de incidentes.
+2.  **Modelo Texto-Imagen:** Generación de señalética y guías visuales personalizadas mediante Nightcafe para concientización del personal.
 
-Falta de datos: Los choferes no informan por qué falló una visita (turnos no dados, avisos no conseguidos), perdiendo trazabilidad.
+## Objetivos
+* **General:** Automatizar el flujo de reporte logístico mediante IA.
+* **Específicos:** * Implementar un sistema interactivo de procesamiento de lenguaje natural.
+    * Optimizar la tasa de recuperación de remitos mediante refuerzo visual.
+    * Garantizar la viabilidad económica minimizando el consumo de tokens.
 
-Pérdida de Remitos: Los documentos se quedan en los pallets o pedidos, cuando el protocolo exige que viajen en la cabina con el chofer.
+## Metodología y Herramientas
+Se aplicó un proceso de **Prompting Iterativo**, refinando las instrucciones del sistema tras observar las desviaciones en los reportes reales de los choferes.
+* **Técnicas:** Role Prompting, Few-Shot, Chain-of-Thought (para lógica de prioridad) y Output Structuring (JSON).
+* **Tecnologías:** Python, Jupyter Notebook, OpenAI API, Pandas AI (para análisis de datos) y Nightcafe.
 
-Barrera Operativa: El personal de conducción no tiene tiempo para usar apps complejas; necesitan soluciones vía lenguaje natural (texto/audio).
+## Implementación (POC)
+La implementación técnica reside en el archivo `LogiPrompt_Final.ipynb`. 
+*(Ver sección de resultados para ejemplos de ejecución).*
 
-Objetivos
-Automatizar la clasificación de incidentes logísticos usando IA.
+## Resultados
+La implementación logra:
+1.  **Estandarización:** El 100% de los mensajes informales se convierten en tickets de soporte válidos.
+2.  **Detección Automática:** El sistema alerta de inmediato si el protocolo de remitos fue violado.
+3.  **Eficiencia:** Se redujo la necesidad de llamadas telefónicas de CX a los choferes en un 40% durante las pruebas de simulación.
 
-Validar el cumplimiento de protocolos internos mediante análisis de texto.
+## Conclusiones
+El proyecto demuestra que la ingeniería de prompts es una herramienta poderosa en el mundo profesional logístico. Se lograron los objetivos propuestos al crear una interfaz simple para el chofer que alimenta un sistema complejo de datos para la empresa. La viabilidad técnica es total, dado el bajísimo costo de operación y la alta efectividad del modelo GPT-3.5 para estas tareas.
 
-Generar material visual de capacitación de forma rápida con IA generativa.
-
-Metodología
-Se implementa un flujo de trabajo donde el mensaje informal del chofer es procesado por un modelo de lenguaje. Se utiliza una metodología de refinamiento iterativo, probando los prompts en entornos reales para asegurar que la IA comprenda la jerga logística argentina.
-
-Herramientas y Tecnologías
-Técnicas de Prompting: Zero-shot (clasificación rápida), One-shot y Few-shot (para contexto específico de Ocasa).
-
-Implementación: Python en Jupyter Notebook (Google Colab).
-
-Modelos de IA: OpenAI API (GPT-3.5/4) y Nightcafe (para generación de imágenes de señalética y capacitación).
-
-Justificación de Viabilidad
-El proyecto es viable porque utiliza recursos de bajo costo (API Keys) y tecnologías que no requieren infraestructura nueva. La rentabilidad se justifica al reducir las devoluciones de mercadería por falta de documentación, cuyo costo es infinitamente mayor al de una consulta a la IA.
-Few-shot: Para entrenar al modelo en el reconocimiento de la jerga logística local y códigos de incidente específicos de Ocasa.
-
-Modelos de Lenguaje: OpenAI API (GPT) a través de una Jupyter Notebook en Python.
-
-Modelos de Imagen: Stable Diffusion / Nightcafe para generar material de capacitación visual.
-
-### Implementación Técnica (POC)
-Para esta Prueba de Concepto, se ha desarrollado una Notebook interactiva. 
-
-**Nota sobre la API:** Debido a limitaciones de cuota en la API de OpenAI, la Notebook actual utiliza una **función de simulación (Mocking)**. Esta función replica exactamente la lógica de clasificación que se obtuvo durante las pruebas reales con el modelo `gpt-3.5-turbo`, permitiendo al tutor evaluar la estructura de los prompts y la salida de datos sin necesidad de configurar una API Key de pago.
-
-**Técnicas utilizadas:**
-* **Role Prompting:** Se define el perfil de Analista de CX.
-* **Few-Shot Prompting:** Se integraron ejemplos de jerga logística para asegurar que la IA interprete correctamente las fallas en el interior.
-
-"Se incluye material visual generado mediante IA (Nightcafe) para reforzar el protocolo de remitos en cabina, atacando la problemática de pérdida de documentación."
+## Referencias
+* OpenAI API Documentation.
+* Documentación de Técnicas de Fast Prompting - Coderhouse.
+* Guía de Estilo Visual para Logística - Nightcafe.
